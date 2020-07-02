@@ -1,7 +1,7 @@
 {
     "name":"Covid Extension",
     "version":"1.0",
-    "description":"Built with Angular :)",
+    "description":"Chrome Extension build by using Angular",
     "manifest_version":2,
     "browser_action":{
         "default_popup":"index.html"
