@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CovidcesService } from "./covidces.service";
+import { CovidTotalComponent } from './covid-total/covid-total.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CovidTotalComponent
   ],  
   imports: [
     BrowserModule,

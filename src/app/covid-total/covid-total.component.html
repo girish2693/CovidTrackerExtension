@@ -1,0 +1,16 @@
+<h2 align="center">Summary on {{rt?.lastupdatedtime}}</h2>
+<p>{{errorMsg}}</p>
+<table align="center">
+    <tr>
+        <th id="tot_h">Total</th>
+        <th id="act_h">Active</th>
+        <th id="rec_h">Recovered</th>
+        <th id="death_h">Deaths</th>
+    </tr>
+    <tr>
+        <td id="tot">{{rt?.confirmed}}</td>
+        <td id="act">{{rt?.active}}</td>
+        <td id="rec">{{rt?.recovered}}</td>
+        <td id="death">{{rt?.deaths}}</td>
+    </tr>
+</table>

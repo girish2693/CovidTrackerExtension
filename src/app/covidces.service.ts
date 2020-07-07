@@ -1,10 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Istat } from './stat';
+import { Observable, throwError } from 'rxjs';
+import { map,catchError} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CovidcesService {
 
-  constructor(private _http:HttpClient) { }
+  public getCovid():Observable<Istat>{
+      return this._http.get<Istat>("https://api.covid19india.org/data.json").pipe(map(res=> res["statewise"][0]),catchError(this.errorHandler));
+  }
+
+  errorHandler(error:HttpErrorResponse){
+    return throwError(error.message||'server Error');
+  }
+
+  constructor(private _http: HttpClient) { }
 }
