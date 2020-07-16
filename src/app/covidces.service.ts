@@ -13,8 +13,8 @@ export class CovidcesService {
       return this._http.get<Istat>("https://api.covid19india.org/data.json").pipe(map(res=> res["statewise"][0]),catchError(this.errorHandler));
   }
 
-  errorHandler(error:HttpErrorResponse){
-    return throwError(error.message||'server Error');
+  errorHandler(_error:HttpErrorResponse){
+    return throwError(_error.message||'server Error');
   }
 
   constructor(private _http: HttpClient) { }
