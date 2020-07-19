@@ -1,11 +1,10 @@
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: rgb(22, 21, 22);
 }
 
 h2 {
-  color: lightsteelblue;
+  color: rgb(188, 130, 202);
 }
 p {
   color: rgb(206, 50, 50);
@@ -14,18 +13,24 @@ p {
 table {
   border-spacing: 20px;
   text-align: center;
+  font-size: 12px;
 }
-td,
-th {
-  padding: 10px 10px 10px 10px;
-  border-radius: 10px;
-  /* border : 1px white solid; */
+td{
+  border-collapse: collapse;
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px;
+    border-radius:10px;
 }
 
 #tot,
 #tot_h {
-  color: cornsilk;
-  border-color: cornsilk;
+  color: rgb(164, 212, 152);
+  border-color: rgb(164, 212, 152);
+}
+#act,
+#act_h {
+  color: rgb(219, 37, 158);
+  border-color: rgb(219, 37, 158);
 }
 #rec,
 #rec_h {
@@ -34,18 +39,19 @@ th {
 }
 #death,
 #death_h {
-  color: lightcoral;
-  border-color: lightcoral;
-}
-#act,
-#act_h {
-  color: darkorchid;
-  border-color: darkorchid;
+  color: rgb(223, 70, 70);
+  border-color: rgb(223, 70, 70);
 }
 
+
 #tot:hover {
-  background-color: cornsilk;
+  background-color: rgb(164, 212, 152);
   color: rgb(24, 23, 23);
+  font-weight: bold;
+}
+#act:hover {
+  background-color: rgb(219, 37, 158);
+  color: white;
   font-weight: bold;
 }
 #rec:hover {
@@ -54,12 +60,8 @@ th {
   font-weight: bold;
 }
 #death:hover {
-  background-color: lightcoral;
+  background-color: rgb(223, 70, 70);
   color: white;
   font-weight: bold;
 }
-#act:hover {
-  background-color: darkorchid;
-  color: white;
-  font-weight: bold;
-}
+
