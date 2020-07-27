@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DistrictService } from '../district.service';
 import { Idistr } from '../distri';
-import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-covid-district',
@@ -12,7 +11,7 @@ export class CovidDistrictComponent implements OnInit {
 
   constructor(public dserv: DistrictService) { }
 
-  public res : Idistr;
+  public res : Idistr[];
   public emsg;
 
 

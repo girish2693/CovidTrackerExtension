@@ -8,15 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { CovidcesService } from "./covidces.service";
 import { CovidTotalComponent } from './covid-total/covid-total.component';
 import { CovidDistrictComponent } from './covid-district/covid-district.component';
-import { CovidStateComponent } from './covid-state/covid-state.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CovidTotalComponent,
-    CovidDistrictComponent,
-    CovidStateComponent
+    CovidDistrictComponent
   ],  
   imports: [
     BrowserModule,

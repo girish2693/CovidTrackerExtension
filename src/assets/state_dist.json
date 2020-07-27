@@ -1,0 +1,29 @@
+{
+    "Andaman and Nicobar Islands" : [
+        "Nicobars","North and Middle Andaman","South Andaman","Unknown"
+    ],
+    "Andhra Pradesh" : [
+        "Foreign Evacuees","Anantapur","Chittoor","East Godavari","Guntur","Krishna","Kurnool",
+        "Prakasam","S.P.S. Nellore","Srikakulam","Visakhapatnam","Vizianagaram",
+        "West Godavari","Y.S.R. Kadapa","Other State"
+    ],
+    "Arunachal Pradesh" :[
+        "Anjaw","Changlang","East Kameng","East Siang","Kamle","Kra Daadi",
+        "Kurung Kumey","Lepa Rada","Lohit","Longding","Lower Dibang Valley",
+        "Lower Siang","Lower Subansiri","Namsai","Pakke Kessang","Papum Pare",
+        "Shi Yomi","Siang","Tawang","Tirap","Upper Dibang Valley","Upper Siang",
+        "Upper Subansiri","West Kameng","West Siang"
+    ],
+    "Assam" : [
+        "Airport Quarantine","Baksa","Barpeta","Biswanath","Bongaigaon",
+        "Cachar","Charaideo","Chirang","Darrang","Dhemaji","Dhubri",
+        "Dibrugarh","Dima Hasao","Goalpara","Golaghat","Hailakandi",
+        "Hojai","Jorhat","Kamrup","Kamrup Metropolitan","Karbi Anglong",
+        "Karimganj","Kokrajhar","Lakhimpur","Majuli","Morigaon","Nagaon",
+        "Nalbari","Sivasagar","Sonitpur","South Salmara Mankachar","Tinsukia",
+        "Udalguri","West Karbi Anglong"
+    ],
+    "Bihar" : [
+        
+    ]
+}

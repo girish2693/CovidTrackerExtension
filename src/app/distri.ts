@@ -1,7 +1,8 @@
-export interface Idistr{
+export interface Idistr {
+    district: string,
     notes: string,
-        active : number,
-        confirmed : number,
-        deceased : number,
-       recovered : number
+    active: number,
+    confirmed: number,
+    deceased: number,
+    recovered: number
 }
