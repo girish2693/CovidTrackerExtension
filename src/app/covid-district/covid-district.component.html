@@ -1,4 +1,10 @@
-<p>covid-district works!</p>
-<ul *ngFor="let x of st">
-    <li>{{x.state}}</li>
-</ul>
+<table align="center">
+    <tr>
+        <th id="statement" colspan=3>State:</th>
+        <td>
+            <select [(ngModel)]="select" (change) = "onChange(select)">
+                <option *ngFor = "let s of st" [(ngValue)]="st.statecode"> {{s.state}}</option>
+            </select>
+        </td>
+    </tr>
+</table>
