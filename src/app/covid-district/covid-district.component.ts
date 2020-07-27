@@ -13,11 +13,13 @@ export class CovidDistrictComponent implements OnInit {
 
   public res : Idistr[];
   public emsg;
+  public st:any=[];
 
 
 
   ngOnInit(): void {
-    this.dserv.getDistrict().subscribe(data=>this.res = data,error=>this.emsg=error);
+    this.dserv.getState().subscribe(data=>this.st=data,error=>this.emsg=error)
+    // this.dserv.getDistrict().subscribe(data=>this.res = data,error=>this.emsg=error);
   }
 
 }
