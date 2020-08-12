@@ -1,10 +1,29 @@
-<table align="center">
+<div>
+  <table align="center">
     <tr>
-        <th id="statement" colspan=3>State:</th>
-        <td>
-            <select [(ngModel)]="select" (change) = "onChange(select)">
-                <option *ngFor = "let s of st" [(ngValue)]="st.statecode"> {{s.state}}</option>
-            </select>
-        </td>
+      <th id="statement" colspan="3">State:</th>
+      <td>
+        <select [(ngModel)]="select" (change)="onChange(select)">
+          <option *ngFor="let s of st" [(ngValue)]="s.state">
+            {{ s.state }}</option>
+        </select>
+      </td>
     </tr>
-</table>
+  </table>
+  <!-- <div *ngIf="flag;then thenBlock;else elseBlock"></div>
+  <ng-template #thenBlock>
+    <table>
+      <tr>
+        <th id="statement" colspan="3">District:</th>
+        <td>
+          <select [(ngModel)]="select" (change)="onChanged(select)">
+            <option *ngFor="let r of res" [(ngValue)]="r">
+              {{ r }}</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </ng-template>
+  <ng-template #elseBlock></ng-template>
+</div> -->
+

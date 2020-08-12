@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DistrictService } from '../district.service';
 import { Idistr } from '../distri';
+import { SelectorListContext } from '@angular/compiler';
 
 @Component({
   selector: 'app-covid-district',
@@ -11,28 +12,34 @@ export class CovidDistrictComponent implements OnInit {
 
   constructor(public dserv: DistrictService) { }
 
-  public res : Idistr[];
   public emsg;
   public st:any=[];
-  public selected=null;
-  public val : any=[];
+  public selst=null;
+  public val : any;
   public select = null;
-  public flag = false;
+  public gs:number;
+  public stt="Andhra Pradesh";
+  public res:any=[];
+
+
 
 
 
   ngOnInit(): void {
     this.dserv.getState().subscribe(data=>this.st=data,error=>this.emsg=error)
-    // this.dserv.getDistrict().subscribe(data=>this.res = data,error=>this.emsg=error);
+    
   }
 
   public onChange(event){
     for( this.val of this.st){
-      if(this.val.statecode==event){
-        this.selected = this.val;
-        this.flag = true;
+      if(this.val.state==event){
+        this.selst = this.val;
+        this.dserv.getDistrict(this.val.state).subscribe(data=>this.res = data,error=>this.emsg=error);
       }
     }
   }
+  // public onChanged(event){
+  //   alert("ok"+ event);
+  // }
 
 }
