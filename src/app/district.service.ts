@@ -21,12 +21,21 @@ export class DistrictService {
   // getDistrict(){
   //   return this._http.get("https://api.covid19india.org/v2/state_district_wise.json").pipe(map(res=>res[2].districtData.map(dt=>console.log(dt.district))),catchError(this.errorHandler));
   // }
-  getDistrict(stt) {
-    return this._http.get<any[]>("https://api.covid19india.org/v2/state_district_wise.json").pipe(map(res => res.forEach(element => {
-      if (element.state == stt) element.districtData.map(dt => console.log(dt.district));
-    })), catchError(this.errorHandler));
+  // getDistrict(stt) {
+  //   return this._http.get<any[]>("https://api.covid19india.org/v2/state_district_wise.json").pipe(map(res => res.forEach(element => {
+  //     if (element.state == stt) element.districtData.map(dt =>dt.district);
+  //   })), catchError(this.errorHandler));
+  // }
+
+  // getDistrict(stt): Observable<Idistr[]> {
+  //   return this._http.get<Idistr[]>("https://api.covid19india.org/v2/state_district_wise.json").pipe(map(res => res[stt].districtData.map(dt=>console.log(dt.district))), catchError(this.errorHandler));
+  // }
+
+  getDistrict(stt): Observable<Idistr[]> {
+    return this._http.get<Idistr[]>("https://api.covid19india.org/v2/state_district_wise.json").pipe(map(res => res[stt]["districtData"]), catchError(this.errorHandler));
   }
-  errorHandler(error: HttpErrorResponse) {
+
+  errorHandler(error: HttpErrorResponse) {  
     return throwError(error.message || 'server Error');
   }
 }

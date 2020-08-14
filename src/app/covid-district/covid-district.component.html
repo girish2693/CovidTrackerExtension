@@ -1,29 +1,58 @@
-<div>
+<div class="custom-select">
   <table align="center">
     <tr>
-      <th id="statement" colspan="3">State:</th>
-      <td>
-        <select [(ngModel)]="select" (change)="onChange(select)">
-          <option *ngFor="let s of st" [(ngValue)]="s.state">
+      <th id="statement-s" colspan="3">State:</th>
+      <td id="td-s">
+        <select [(ngModel)]="selects" (change)="onChange(selects)" class="select">
+          <option *ngFor="let s of st;" [(ngValue)]="s.state">
             {{ s.state }}</option>
         </select>
       </td>
     </tr>
   </table>
-  <!-- <div *ngIf="flag;then thenBlock;else elseBlock"></div>
+</div>
+
+ <!-- District dropdown -->
+
+  <div *ngIf="flags;then thenBlock;else elseBlock"></div>
   <ng-template #thenBlock>
-    <table>
+    <table align="center">
       <tr>
-        <th id="statement" colspan="3">District:</th>
-        <td>
-          <select [(ngModel)]="select" (change)="onChanged(select)">
-            <option *ngFor="let r of res" [(ngValue)]="r">
-              {{ r }}</option>
+        <th id="statement-d" colspan="3">District:</th>
+        <td id="td-d">
+          <select [(ngModel)]="selectd" (change)="onChanged(selectd)" class="select">
+            <option *ngFor="let r of res" [(ngValue)]="r.district">
+              {{ r.district }}</option>
           </select>
         </td>
       </tr>
     </table>
   </ng-template>
   <ng-template #elseBlock></ng-template>
-</div> -->
 
+  <hr>
+
+<!-- Displaying COVID details according to district -->
+
+<div *ngIf="flagd;then thenBlockd;else elseBlockd"></div>
+<ng-template #thenBlockd>
+    <table align="center">
+        <tr class = "restd">
+            <th colspan="4" align="center" style="font-size: 14pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{seldt?.district}}</th>
+        </tr>
+        <tr>
+            <th id="tot_h">Total</th>
+            <th id="act_h">Active</th>
+            <th id="rec_h">Recovered</th>
+            <th id="death_h">Deaths</th>
+            
+        </tr>
+        <tr>
+            <td id="tot">{{seldt.confirmed}}</td>
+            <td id="act">{{seldt.active}}</td>
+            <td id="rec">{{seldt.recovered}}</td>
+            <td id="death">{{seldt.deceased}}</td>
+        </tr>
+    </table>
+</ng-template>
+<ng-template #elseBlockd></ng-template>
